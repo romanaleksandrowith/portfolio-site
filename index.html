@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman — Data Automation Specialist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .lang-btn {
+      padding: 8px 14px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .lang-btn:hover {
+      background: #f3f3f3;
+    }
+
+    hr {
+      margin: 24px 0;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+    <button class="lang-btn" onclick="setLanguage('ru')">RU</button>
+  </div>
+
+  <h1 id="hero-title"></h1>
+  <p id="hero-text"></p>
+
+  <hr>
+
+  <h2 id="services-title"></h2>
+  <ul id="services-list"></ul>
+
+  <hr>
+
+  <h2 id="portfolio-title"></h2>
+
+  <h3 id="project1-title"></h3>
+  <p id="project1-text"></p>
+
+  <h3 id="project2-title"></h3>
+  <p id="project2-text"></p>
+
+  <h3 id="project3-title"></h3>
+  <p id="project3-text"></p>
+
+  <h3 id="project4-title"></h3>
+  <p id="project4-text"></p>
+
+  <hr>
+
+  <h2 id="work-title"></h2>
+  <ol id="work-list"></ol>
+
+  <hr>
+
+  <h2 id="tools-title"></h2>
+  <p id="tools-text"></p>
+
+  <hr>
+
+  <h2 id="contact-title"></h2>
+  <p id="contact-text"></p>
+
+  <script>
+    const content = {
+      en: {
+        pageTitle: "Roman — Data Automation Specialist",
+        heroTitle: "Roman — Data Automation & Reporting Specialist",
+        heroText:
+          "I help businesses clean, structure, and automate their data workflows, as well as build clear dashboards using Excel, Power BI, Python, and Google Sheets.",
+
+        servicesTitle: "What I can help you with",
+        services: [
+          "Data cleaning and structuring",
+          "Excel automation and reporting",
+          "Power BI dashboards",
+          "Python data processing",
+          "Google Sheets automation (Apps Script)",
+          "SQL and Access data handling"
+        ],
+
+        portfolioTitle: "Portfolio",
+        project1Title: "Excel Report Automation",
+        project1Text:
+          "Automated reporting workflow to reduce manual work and speed up data processing.",
+
+        project2Title: "Power BI Dashboard",
+        project2Text:
+          "Built an interactive dashboard with KPIs and filters for business insights.",
+
+        project3Title: "Python Data Processing",
+        project3Text:
+          "Created scripts for cleaning and transforming datasets.",
+
+        project4Title: "Google Sheets Automation",
+        project4Text:
+          "Automated repetitive tasks using Google Apps Script.",
+
+        workTitle: "How I work",
+        work: [
+          "Understand your task",
+          "Analyze data",
+          "Build solution",
+          "Deliver result"
+        ],
+
+        toolsTitle: "Tools",
+        toolsText: "Excel • Power BI • Python • Google Apps Script • SQL • Access",
+
+        contactTitle: "Contact",
+        contactText: "GitHub | Upwork | Kwork | Email"
+      },
+
+      ru: {
+        pageTitle: "Roman — Специалист по автоматизации и отчетности",
+        heroTitle: "Roman — Специалист по автоматизации и аналитической отчетности",
+        heroText:
+          "Я помогаю бизнесу очищать, структурировать и автоматизировать работу с данными, а также создавать понятные дашборды с помощью Excel, Power BI, Python и Google Sheets.",
+
+        servicesTitle: "Чем я могу помочь",
+        services: [
+          "Очистка и структурирование данных",
+          "Автоматизация и отчеты в Excel",
+          "Дашборды в Power BI",
+          "Обработка данных с помощью Python",
+          "Автоматизация Google Sheets (Apps Script)",
+          "Работа с SQL и Access"
+        ],
+
+        portfolioTitle: "Портфолио",
+        project1Title: "Автоматизация отчетов в Excel",
+        project1Text:
+          "Автоматизировал процесс подготовки отчетов, чтобы сократить ручную работу и ускорить обработку данных.",
+
+        project2Title: "Дашборд в Power BI",
+        project2Text:
+          "Создал интерактивный дашборд с KPI и фильтрами для удобного анализа бизнес-показателей.",
+
+        project3Title: "Обработка данных на Python",
+        project3Text:
+          "Разработал скрипты для очистки и преобразования наборов данных.",
+
+        project4Title: "Автоматизация Google Sheets",
+        project4Text:
+          "Автоматизировал повторяющиеся задачи с помощью Google Apps Script.",
+
+        workTitle: "Как я работаю",
+        work: [
+          "Изучаю вашу задачу",
+          "Анализирую данные",
+          "Создаю решение",
+          "Передаю готовый результат"
+        ],
+
+        toolsTitle: "Инструменты",
+        toolsText: "Excel • Power BI • Python • Google Apps Script • SQL • Access",
+
+        contactTitle: "Контакты",
+        contactText: "GitHub | Upwork | Kwork | Email"
+      }
+    };
+
+    function renderList(elementId, items) {
+      const el = document.getElementById(elementId);
+      el.innerHTML = "";
+      items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        el.appendChild(li);
+      });
+    }
+
+    function setLanguage(lang) {
+      const t = content[lang];
+
+      document.documentElement.lang = lang;
+      document.title = t.pageTitle;
+
+      document.getElementById("hero-title").textContent = t.heroTitle;
+      document.getElementById("hero-text").textContent = t.heroText;
+
+      document.getElementById("services-title").textContent = t.servicesTitle;
+      renderList("services-list", t.services);
+
+      document.getElementById("portfolio-title").textContent = t.portfolioTitle;
+
+      document.getElementById("project1-title").textContent = t.project1Title;
+      document.getElementById("project1-text").textContent = t.project1Text;
+
+      document.getElementById("project2-title").textContent = t.project2Title;
+      document.getElementById("project2-text").textContent = t.project2Text;
+
+      document.getElementById("project3-title").textContent = t.project3Title;
+      document.getElementById("project3-text").textContent = t.project3Text;
+
+      document.getElementById("project4-title").textContent = t.project4Title;
+      document.getElementById("project4-text").textContent = t.project4Text;
+
+      document.getElementById("work-title").textContent = t.workTitle;
+      renderList("work-list", t.work);
+
+      document.getElementById("tools-title").textContent = t.toolsTitle;
+      document.getElementById("tools-text").textContent = t.toolsText;
+
+      document.getElementById("contact-title").textContent = t.contactTitle;
+      document.getElementById("contact-text").textContent = t.contactText;
+
+      localStorage.setItem("siteLanguage", lang);
+    }
+
+    const savedLanguage = localStorage.getItem("siteLanguage") || "en";
+    setLanguage(savedLanguage);
+  </script>
+</body>
+</html>
