@@ -56,21 +56,23 @@
   <ul id="services-list"></ul>
 
   <hr>
+	  <h2 id="portfolio-title"></h2>
 
-  <h2 id="portfolio-title"></h2>
+	  <h3 id="project1-title"></h3>
+	  <p id="project1-text"></p>
 
-  <h3 id="project1-title"></h3>
-  <p id="project1-text"></p>
+	  <h3 id="project2-title"></h3>
+	  <p id="project2-text"></p>
 
-  <h3 id="project2-title"></h3>
-  <p id="project2-text"></p>
+	  <h3 id="project3-title"></h3>
+	  <p id="project3-text"></p>
 
-  <h3 id="project3-title"></h3>
-  <p id="project3-text"></p>
-
-  <h3 id="project4-title"></h3>
-  <p id="project4-text"></p>
-
+	  <h3 id="project4-title"></h3>
+	  <p id="project4-text"></p>
+	
+		<h3 id="project5-title"></h3>
+		<p id="project5-text"></p>
+		<p><a id="project5-link" href="#" target="_blank">View project</a></p>
   <hr>
 
   <h2 id="work-title"></h2>
@@ -120,7 +122,13 @@
         project4Title: "Google Sheets Automation",
         project4Text:
           "Automated repetitive tasks using Google Apps Script.",
-
+		
+		project5Title: "News Monitoring Automation (Google Apps Script)",
+		project5Text:
+			"Automated solution that collects news by keywords, stores results in Google Sheets, and supports structured reporting. Includes Google News RSS parsing, automated processing, Sheets integration, and a live demo.",
+		project5LinkText: "View project / demo",
+		project5Link: "https://docs.google.com/spreadsheets/d/12drtad20WxVXm-7gCHYJixvpeIyRUdazBJbTDKtzmKk/edit?usp=sharing",
+		
         workTitle: "How I work",
         work: [
           "Understand your task",
@@ -168,7 +176,13 @@
         project4Title: "Автоматизация Google Sheets",
         project4Text:
           "Автоматизировал повторяющиеся задачи с помощью Google Apps Script.",
-
+		
+		project5Title: "Автоматизация мониторинга новостей (Google Apps Script)",
+		project5Text:
+			"Автоматизированное решение для сбора новостей по ключевым словам, записи результатов в Google Sheets и формирования структурированного отчёта. Включает парсинг Google News RSS, автоматическую обработку, интеграцию с Google Sheets и live demo.",
+		project5LinkText: "Открыть проект / демо",
+		project5Link: "https://docs.google.com/spreadsheets/d/12drtad20WxVXm-7gCHYJixvpeIyRUdazBJbTDKtzmKk/edit?usp=sharing",
+		
         workTitle: "Как я работаю",
         work: [
           "Изучаю вашу задачу",
@@ -201,34 +215,39 @@
       document.documentElement.lang = lang;
       document.title = t.pageTitle;
 
-      document.getElementById("hero-title").textContent = t.heroTitle;
-      document.getElementById("hero-text").textContent = t.heroText;
+		document.getElementById("hero-title").textContent = t.heroTitle;
+		document.getElementById("hero-text").textContent = t.heroText;
 
-      document.getElementById("services-title").textContent = t.servicesTitle;
-      renderList("services-list", t.services);
+		document.getElementById("services-title").textContent = t.servicesTitle;
+		renderList("services-list", t.services);
 
-      document.getElementById("portfolio-title").textContent = t.portfolioTitle;
+		document.getElementById("portfolio-title").textContent = t.portfolioTitle;
 
-      document.getElementById("project1-title").textContent = t.project1Title;
-      document.getElementById("project1-text").textContent = t.project1Text;
+		document.getElementById("project1-title").textContent = t.project1Title;
+		document.getElementById("project1-text").textContent = t.project1Text;
 
-      document.getElementById("project2-title").textContent = t.project2Title;
-      document.getElementById("project2-text").textContent = t.project2Text;
+		document.getElementById("project2-title").textContent = t.project2Title;
+		document.getElementById("project2-text").textContent = t.project2Text;
 
-      document.getElementById("project3-title").textContent = t.project3Title;
-      document.getElementById("project3-text").textContent = t.project3Text;
+		document.getElementById("project3-title").textContent = t.project3Title;
+		document.getElementById("project3-text").textContent = t.project3Text;
 
-      document.getElementById("project4-title").textContent = t.project4Title;
-      document.getElementById("project4-text").textContent = t.project4Text;
+		document.getElementById("project4-title").textContent = t.project4Title;
+		document.getElementById("project4-text").textContent = t.project4Text;
+	
+		document.getElementById("project5-title").textContent = t.project5Title;
+		document.getElementById("project5-text").textContent = t.project5Text;
+		document.getElementById("project5-link").textContent = t.project5LinkText;
+		document.getElementById("project5-link").href = t.project5Link;
+		
+		document.getElementById("work-title").textContent = t.workTitle;
+		renderList("work-list", t.work);
 
-      document.getElementById("work-title").textContent = t.workTitle;
-      renderList("work-list", t.work);
+		document.getElementById("tools-title").textContent = t.toolsTitle;
+		document.getElementById("tools-text").textContent = t.toolsText;
 
-      document.getElementById("tools-title").textContent = t.toolsTitle;
-      document.getElementById("tools-text").textContent = t.toolsText;
-
-      document.getElementById("contact-title").textContent = t.contactTitle;
-      document.getElementById("contact-text").textContent = t.contactText;
+		document.getElementById("contact-title").textContent = t.contactTitle;
+		document.getElementById("contact-text").textContent = t.contactText;
 
       localStorage.setItem("siteLanguage", lang);
     }
@@ -237,25 +256,7 @@
     setLanguage(savedLanguage);
   </script>
 
-  <h2>📊 News Monitoring Automation (Google Apps Script)</h2>
-
-  <p>
-  Automated solution that collects news by keywords (Python, SQL, Power BI)
-  and sends structured reports.
-  </p>
   
-  <ul>
-    <li>✔ Data extraction from Google News (RSS)</li>
-    <li>✔ Automated processing</li>
-    <li>✔ Google Sheets integration</li>
-    <li>✔ Email reporting</li>
-  </ul>
-  
-  <p>
-    <a href="https://docs.google.com/spreadsheets/d/12drtad20WxVXm-7gCHYJixvpeIyRUdazBJbTDKtzmKk/edit?usp=sharing"> 
-      🔗 View Live Demo
-    </a>
-  </p>
   
 </body>
 </html>
