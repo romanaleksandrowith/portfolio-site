@@ -73,6 +73,11 @@
 		<h3 id="project5-title"></h3>
 		<p id="project5-text"></p>
 		<p><a id="project5-link" href="#" target="_blank">View project</a></p>
+		
+		<h3 id="project6-title"></h3>
+		<p id="project6-text"></p>
+		<p><a id="project6-link" href="#" target="_blank">View project</a></p>
+
   <hr>
 
   <h2 id="work-title"></h2>
@@ -129,6 +134,15 @@
 		project5LinkText: "View project / demo",
 		project5Link: "https://docs.google.com/spreadsheets/d/12drtad20WxVXm-7gCHYJixvpeIyRUdazBJbTDKtzmKk/edit?usp=sharing",
 		
+		project6Title: "Patient Visit Funnel Dashboard (FHIR API)",
+		project6Text:
+		  "Pilot analytics project based on open FHIR API data. Implemented Python ETL, JSON normalization, SQLite staging tables, SQL matching between appointments and encounters, and KPI calculation for the patient funnel from scheduled visit to completed encounter.",
+		project6LinkText: "View project on GitHub",
+		project6Link: "https://github.com/romanaleksandrowith/fhir-patient-dashboard",
+		
+		
+		
+		
         workTitle: "How I work",
         work: [
           "Understand your task",
@@ -183,6 +197,12 @@
 		project5LinkText: "Открыть проект / демо",
 		project5Link: "https://docs.google.com/spreadsheets/d/12drtad20WxVXm-7gCHYJixvpeIyRUdazBJbTDKtzmKk/edit?usp=sharing",
 		
+		project6Title: "Дашборд воронки пациентов (FHIR API)",
+		project6Text:
+		  "Пилотный аналитический проект на основе открытого FHIR API. Реализованы ETL на Python, нормализация JSON, загрузка данных в SQLite, построение staging-таблиц, SQL-сопоставление Appointment и Encounter и расчет KPI для воронки пациентов: запись на визит → состоявшийся прием.",
+		project6LinkText: "Открыть проект на GitHub",
+		project6Link: "https://github.com/romanaleksandrowith/fhir-patient-dashboard",
+
         workTitle: "Как я работаю",
         work: [
           "Изучаю вашу задачу",
@@ -240,6 +260,11 @@
 		document.getElementById("project5-link").textContent = t.project5LinkText;
 		document.getElementById("project5-link").href = t.project5Link;
 		
+		document.getElementById("project6-title").textContent = t.project6Title;
+		document.getElementById("project6-text").textContent = t.project6Text;
+		document.getElementById("project6-link").textContent = t.project6LinkText;
+		document.getElementById("project6-link").href = t.project6Link;
+
 		document.getElementById("work-title").textContent = t.workTitle;
 		renderList("work-list", t.work);
 
