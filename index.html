@@ -1,287 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roman — Data Automation Specialist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
-      line-height: 1.6;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .lang-btn {
-      padding: 8px 14px;
-      border: 1px solid #ccc;
-      background: white;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    .lang-btn:hover {
-      background: #f3f3f3;
-    }
-
-    hr {
-      margin: 24px 0;
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 10px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Автоматизация маршрутов, отчетов и AI-процессов для малого бизнеса.">
+  <title data-i18n="metaTitle">Роман | Автоматизация для малого бизнеса</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="topbar">
-    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-    <button class="lang-btn" onclick="setLanguage('ru')">RU</button>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand" aria-label="Roman Automation">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Roman Automation</strong>
+          <small data-i18n="brandSubtitle">веб-сервисы для малого бизнеса</small>
+        </span>
+      </div>
+
+      <nav class="nav-links" aria-label="Основное меню">
+        <button class="nav-item is-active" type="button" data-section-target="overview" data-i18n="navOverview">Обзор</button>
+        <button class="nav-item" type="button" data-section-target="route" data-i18n="navRoute">Оптимизатор маршрутов</button>
+        <button class="nav-item" type="button" data-section-target="reports" data-i18n="navReports">AI-отчеты и PDF</button>
+        <button class="nav-item" type="button" data-section-target="about" data-i18n="navAbout">Обо мне и контакты</button>
+        <button class="nav-item language-toggle" type="button" data-language-toggle>RU / EN</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content-section is-active" id="overview" data-section="overview">
+        <div class="hero-panel">
+          <div class="hero-copy info-card">
+            <span class="section-label" data-i18n="heroBadge">Практичная автоматизация</span>
+            <h1 class="hero-title" data-i18n="heroTitle">Автоматизация маршрутов, отчетов и AI-процессов для малого бизнеса</h1>
+            <p data-i18n="heroSubtitle">
+              Я создаю небольшие веб-сервисы, которые можно быстро адаптировать под конкретный бизнес: маршруты, отчеты, клиентские справки, уведомления, PDF-документы и внутренние рабочие кабинеты.
+            </p>
+            <div class="hero-actions">
+              <a class="action-button" href="https://route-mvp-test.pages.dev/" target="_blank" rel="noopener" data-i18n="openRouteDemo">Открыть демо маршрутов</a>
+              <a class="action-button" href="https://ai-report-demo-roman.onrender.com/dispatcher" target="_blank" rel="noopener" data-i18n="openReportsDemo">Открыть демо отчетов</a>
+              <a class="action-button" href="mailto:Roman11092017@gmail.com" data-i18n="contactMe">Связаться</a>
+            </div>
+          </div>
+
+          <aside class="intro-card info-card" aria-label="Направления автоматизации">
+            <h2 data-i18n="overviewDirectionsTitle">Что можно автоматизировать</h2>
+            <div class="direction-list">
+              <article class="inner-card">
+                <span class="direction-number">01</span>
+                <h3 data-i18n="overviewRouteTitle">Оптимизатор маршрутов</h3>
+                <p data-i18n="overviewRouteText">Расчет порядка точек, расстояния, времени, карты и отчетов для доставок, выездов и малого автопарка.</p>
+              </article>
+              <article class="inner-card">
+                <span class="direction-number">02</span>
+                <h3 data-i18n="overviewReportsTitle">AI-отчеты и PDF</h3>
+                <p data-i18n="overviewReportsText">Генерация справок, дайджестов, мини-отчетов и PDF по шаблону без сложной настройки для пользователя.</p>
+              </article>
+              <article class="inner-card">
+                <span class="direction-number">03</span>
+                <h3 data-i18n="overviewCustomTitle">Индивидуальные процессы под бизнес</h3>
+                <p data-i18n="overviewCustomText">Рабочие кабинеты, уведомления, интеграции с Excel, CRM, базами данных и внутренними таблицами.</p>
+              </article>
+            </div>
+          </aside>
+        </div>
+
+        <div class="section-heading">
+          <h2 data-i18n="foundationTitle">Фундамент для индивидуальных решений</h2>
+          <p data-i18n="foundationText">
+            Эти демонстрационные прототипы можно использовать как основу: заменить справочники, добавить нужные поля, подключить источники данных и подстроить интерфейс под работу конкретной команды.
+          </p>
+        </div>
+
+        <div class="cards three-columns">
+          <article class="glass-card info-card">
+            <h3 data-i18n="worksTitle">Что уже работает</h3>
+            <p data-i18n="worksText">Маршруты, расчет расстояний, AI-дайджесты, HTML/PDF-документы, клиентские ссылки и понятные рабочие сценарии.</p>
+          </article>
+          <article class="glass-card info-card">
+            <h3 data-i18n="developTitle">Куда можно развить</h3>
+            <p data-i18n="developText">CRM, отчеты, Telegram/e-mail уведомления, GPS-мониторинг, роли пользователей, интеграции и AI-помощники.</p>
+          </article>
+          <article class="glass-card info-card">
+            <h3 data-i18n="examplesTitle">Примеры применения</h3>
+            <p data-i18n="examplesText">Доставка, сервисные выезды, отчеты руководителю, клиентские справки, контроль заявок и автоматизация документов.</p>
+          </article>
+        </div>
+
+        <p class="tech-line">
+          <strong data-i18n="techLabel">Технологии:</strong>
+          Python, SQL, VBA, FastAPI, SQLite, Docker, Render, GitHub Pages, OpenRouter, HTML, CSS, JavaScript.
+        </p>
+      </section>
+
+      <section class="content-section" id="route" data-section="route" hidden>
+        <div class="section-heading wide info-card">
+          <span class="section-label" data-i18n="routeBadge">демонстрационный прототип</span>
+          <h1 class="project-title" data-i18n="routeTitle">Оптимизатор маршрутов для доставок, выездов и сервисных задач</h1>
+          <p data-i18n="routeDescription">
+            Сервис помогает выстроить порядок точек маршрута, посчитать расстояние и время, сравнить исходный маршрут с улучшенным и показать результат на карте.
+          </p>
+          <div class="hero-actions">
+            <a class="action-button" href="./assets/presentations/route_optimizer_ru.pdf?v=2026-05-13-06" target="_blank" rel="noopener" data-pdf-link="route" data-i18n="openPdf">Открыть презентацию PDF</a>
+            <a class="action-button" href="https://route-mvp-test.pages.dev/" target="_blank" rel="noopener" data-i18n="openDemo">Открыть демо</a>
+            <a class="action-button" href="mailto:Roman11092017@gmail.com" data-i18n="contactMe">Связаться</a>
+          </div>
+        </div>
+
+        <div class="process-strip" aria-label="Схема работы">
+          <span data-i18n="routeFlow1">Заявки / адреса</span>
+          <span data-i18n="routeFlow2">Расчет маршрута</span>
+          <span data-i18n="routeFlow3">Карта и порядок точек</span>
+          <span data-i18n="routeFlow4">Отчет / уведомления / CRM</span>
+        </div>
+
+        <div class="cards two-columns">
+          <article class="glass-card info-card">
+            <h2 data-i18n="alreadyTitle">Что уже есть</h2>
+            <ul>
+              <li data-i18n="routeAlready1">добавление городов и адресов;</li>
+              <li data-i18n="routeAlready2">расчет маршрута по дорожной сети;</li>
+              <li data-i18n="routeAlready3">сравнение исходного и улучшенного порядка точек;</li>
+              <li data-i18n="routeAlready4">карта, километры и ориентировочное время;</li>
+              <li data-i18n="routeAlready5">демонстрационный режим без сложной регистрации;</li>
+              <li data-i18n="routeAlready6">возможность использовать проект как основу для пилота.</li>
+            </ul>
+          </article>
+          <article class="glass-card info-card">
+            <h2 data-i18n="growthTitle">Куда можно развивать</h2>
+            <ul>
+              <li data-i18n="routeGrowth1">диспетчерский кабинет для заявок и выездов;</li>
+              <li data-i18n="routeGrowth2">маршрутные листы для водителей или курьеров;</li>
+              <li data-i18n="routeGrowth3">отчеты по пробегу, времени, отклонениям и выполнению задач;</li>
+              <li data-i18n="routeGrowth4">уведомления в Telegram/e-mail при опоздании или изменении статуса;</li>
+              <li data-i18n="routeGrowth5">интеграция с GPS-маячками и трекерами;</li>
+              <li data-i18n="routeGrowth6">мини-CRM для конкретного бизнеса;</li>
+              <li data-i18n="routeGrowth7">AI-подсказки по причинам отклонений и оптимизации загрузки.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="table-card info-card">
+          <h2 data-i18n="routeTableTitle">Таблица применений</h2>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="tableUseCase">Сценарий</th>
+                  <th data-i18n="tableBenefit">Как помогает</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="routeCase1">Курьерская доставка</td>
+                  <td data-i18n="routeBenefit1">Планирование порядка адресов и контроль времени.</td>
+                </tr>
+                <tr>
+                  <td data-i18n="routeCase2">Сервисные выезды</td>
+                  <td data-i18n="routeBenefit2">Удобный маршрут для мастеров, инженеров и мобильных сотрудников.</td>
+                </tr>
+                <tr>
+                  <td data-i18n="routeCase3">Инспекции и обходы</td>
+                  <td data-i18n="routeBenefit3">Список точек, карта и отчет о выполнении задач.</td>
+                </tr>
+                <tr>
+                  <td data-i18n="routeCase4">Малый автопарк</td>
+                  <td data-i18n="routeBenefit4">Снижение лишнего пробега и понятные отчеты по рейсам.</td>
+                </tr>
+                <tr>
+                  <td data-i18n="routeCase5">GPS-маячки и трекеры</td>
+                  <td data-i18n="routeBenefit5">Основа для мониторинга факта движения и отклонений.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="reports" data-section="reports" hidden>
+        <div class="section-heading wide info-card">
+          <span class="section-label" data-i18n="reportsBadge">документы по шаблону</span>
+          <h1 class="project-title" data-i18n="reportsTitle">AI-отчеты и PDF-документы по шаблону</h1>
+          <p data-i18n="reportsDescription">
+            Сервис превращает шаблон и короткое пожелание клиента в готовый документ: справку, дайджест, мини-отчет или PDF. Пользователю не нужно разбираться в prompt engineering — он выбирает сценарий и получает результат.
+          </p>
+          <div class="hero-actions">
+            <a class="action-button" href="./assets/presentations/client_digest_hub_ru.pdf" target="_blank" rel="noopener" data-pdf-link="reports" data-i18n="openPdf">Открыть презентацию PDF</a>
+            <a class="action-button" href="https://ai-report-demo-roman.onrender.com/dispatcher" target="_blank" rel="noopener" data-i18n="openDemo">Открыть демо</a>
+            <a class="action-button" href="mailto:Roman11092017@gmail.com" data-i18n="contactMe">Связаться</a>
+          </div>
+        </div>
+
+        <div class="process-strip reports-flow" aria-label="Схема работы">
+          <span data-i18n="reportsFlow1">Источники данных</span>
+          <span data-i18n="reportsFlow2">Шаблон отчета</span>
+          <span data-i18n="reportsFlow3">AI-обработка</span>
+          <span data-i18n="reportsFlow4">PDF / HTML / e-mail / ссылка</span>
+          <span data-i18n="reportsFlow5">Решение для клиента или руководителя</span>
+        </div>
+
+        <div class="cards two-columns">
+          <article class="glass-card info-card">
+            <h2 data-i18n="alreadyTitle">Что уже есть</h2>
+            <ul>
+              <li data-i18n="reportsAlready1">создание проекта или клиентской заявки;</li>
+              <li data-i18n="reportsAlready2">выбор шаблона результата;</li>
+              <li data-i18n="reportsAlready3">необязательное пожелание клиента;</li>
+              <li data-i18n="reportsAlready4">генерация AI-дайджеста;</li>
+              <li data-i18n="reportsAlready5">сохранение результата в HTML/PDF;</li>
+              <li data-i18n="reportsAlready6">клиентская ссылка;</li>
+              <li data-i18n="reportsAlready7">русская и английская логика интерфейса;</li>
+              <li data-i18n="reportsAlready8">демонстрационный деплой на Render.</li>
+            </ul>
+          </article>
+          <article class="glass-card info-card">
+            <h2 data-i18n="growthTitle">Куда можно развивать</h2>
+            <ul>
+              <li data-i18n="reportsGrowth1">автоматические отчеты из Telegram-чатов;</li>
+              <li data-i18n="reportsGrowth2">анализ заявок, отзывов, обращений и переписок;</li>
+              <li data-i18n="reportsGrowth3">регулярные PDF-сводки для руководителя;</li>
+              <li data-i18n="reportsGrowth4">отчеты по продажам, клиентам, заявкам и динамике;</li>
+              <li data-i18n="reportsGrowth5">внутренний портал для сотрудников;</li>
+              <li data-i18n="reportsGrowth6">генерация коммерческих предложений и справок;</li>
+              <li data-i18n="reportsGrowth7">интеграция с Excel, Google Sheets, CRM, базами данных;</li>
+              <li data-i18n="reportsGrowth8">локальное развертывание на ПК или сервере компании.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="notice-card info-card">
+          <h2 data-i18n="importantTitle">Важное пояснение</h2>
+          <p data-i18n="emailNotice">
+            Функция отправки e-mail технически предусмотрена, но на бесплатном облачном хостинге могут быть ограничения SMTP-портов. Для production-версии лучше подключать отдельный email API или разворачивать решение локально/на сервере клиента.
+          </p>
+        </aside>
+      </section>
+
+      <section class="content-section" id="about" data-section="about" hidden>
+        <div class="section-heading wide info-card about-card">
+          <span class="section-label" data-i18n="aboutBadge">о работе</span>
+          <h1 class="about-title" data-i18n="aboutTitle">Обо мне и контакты</h1>
+          <p data-i18n="aboutText1">Меня зовут Роман.</p>
+          <p data-i18n="aboutText2">
+            Я занимаюсь автоматизацией отчетности, аналитики и рабочих процессов. Мой практический опыт связан с Excel, VBA, SQL, Python, отчетами, обработкой данных и созданием небольших веб-сервисов.
+          </p>
+          <p data-i18n="aboutText3">
+            Я могу помочь малому бизнесу быстро проверить идею автоматизации: собрать прототип, показать рабочий сценарий, подготовить отчетность, связать данные и сделать понятный интерфейс для сотрудников или клиентов.
+          </p>
+        </div>
+
+        <div class="cards two-columns">
+          <article class="glass-card info-card">
+            <h2 data-i18n="whatHelpTitle">С чем могу помочь</h2>
+            <p data-i18n="whatHelpText">Маршруты, отчеты, CRM-процессы, AI-помощники, интеграции, Excel/SQL/Python-автоматизация и интерфейсы для ежедневной работы.</p>
+          </article>
+          <article class="glass-card info-card">
+            <h2 data-i18n="approachTitle">Подход</h2>
+            <p data-i18n="approachText">Быстрый прототип, проверка сценария на реальных данных, понятный интерфейс и развитие решения под процесс конкретной команды.</p>
+          </article>
+        </div>
+
+        <div class="info-card contact-card">
+          <h3 data-i18n="contactBlockTitle">Контакты</h3>
+          <div class="contact-list">
+            <p><strong>E-mail:</strong> <a href="mailto:Roman11092017@gmail.com">Roman11092017@gmail.com</a></p>
+            <p><strong>Telegram:</strong> <a href="https://t.me/W10FAN" target="_blank" rel="noopener">@W10FAN</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/romanaleksandrowith" target="_blank" rel="noopener">github.com/romanaleksandrowith</a></p>
+            <p><strong>Portfolio:</strong> <a href="https://romanaleksandrowith.github.io/portfolio-site" target="_blank" rel="noopener">romanaleksandrowith.github.io/portfolio-site</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="footerName">Roman Automation</span>
+      <span data-i18n="footerText">Статический сайт для GitHub Pages</span>
+    </footer>
   </div>
 
-  <h1 id="hero-title"></h1>
-  <p id="hero-text"></p>
-
-  <hr>
-
-  <h2 id="services-title"></h2>
-  <ul id="services-list"></ul>
-
-  <hr>
-	  <h2 id="portfolio-title"></h2>
-
-	  <h3 id="project1-title"></h3>
-	  <p id="project1-text"></p>
-
-	  <h3 id="project2-title"></h3>
-	  <p id="project2-text"></p>
-
-	  <h3 id="project3-title"></h3>
-	  <p id="project3-text"></p>
-
-	  <h3 id="project4-title"></h3>
-	  <p id="project4-text"></p>
-	
-		<h3 id="project5-title"></h3>
-		<p id="project5-text"></p>
-		<p><a id="project5-link" href="#" target="_blank">View project</a></p>
-		
-		<h3 id="project6-title"></h3>
-		<p id="project6-text"></p>
-		<p><a id="project6-link" href="#" target="_blank">View project</a></p>
-
-  <hr>
-
-  <h2 id="work-title"></h2>
-  <ol id="work-list"></ol>
-
-  <hr>
-
-  <h2 id="tools-title"></h2>
-  <p id="tools-text"></p>
-
-  <hr>
-
-  <h2 id="contact-title"></h2>
-  <p id="contact-text"></p>
-
-  <script>
-    const content = {
-      en: {
-        pageTitle: "Roman — Data Automation Specialist",
-        heroTitle: "Roman — Data Automation & Reporting Specialist",
-        heroText:
-          "I help businesses clean, structure, and automate their data workflows, as well as build clear dashboards using Excel, Power BI, Python, and Google Sheets.",
-
-        servicesTitle: "What I can help you with",
-        services: [
-          "Data cleaning and structuring",
-          "Excel automation and reporting",
-          "Power BI dashboards",
-          "Python data processing",
-          "Google Sheets automation (Apps Script)",
-          "SQL and Access data handling"
-        ],
-
-        portfolioTitle: "Portfolio",
-        project1Title: "Excel Report Automation",
-        project1Text:
-          "Automated reporting workflow to reduce manual work and speed up data processing.",
-
-        project2Title: "Power BI Dashboard",
-        project2Text:
-          "Built an interactive dashboard with KPIs and filters for business insights.",
-
-        project3Title: "Python Data Processing",
-        project3Text:
-          "Created scripts for cleaning and transforming datasets.",
-
-        project4Title: "Google Sheets Automation",
-        project4Text:
-          "Automated repetitive tasks using Google Apps Script.",
-		
-		project5Title: "News Monitoring Automation (Google Apps Script)",
-		project5Text:
-			"Automated solution that collects news by keywords, stores results in Google Sheets, and supports structured reporting. Includes Google News RSS parsing, automated processing, Sheets integration, and a live demo.",
-		project5LinkText: "View project / demo",
-		project5Link: "https://docs.google.com/spreadsheets/d/12drtad20WxVXm-7gCHYJixvpeIyRUdazBJbTDKtzmKk/edit?usp=sharing",
-		
-		project6Title: "Patient Visit Funnel Dashboard (FHIR API)",
-		project6Text:
-		  "Pilot analytics project based on open FHIR API data. Implemented Python ETL, JSON normalization, SQLite staging tables, SQL matching between appointments and encounters, and KPI calculation for the patient funnel from scheduled visit to completed encounter.",
-		project6LinkText: "View project on GitHub",
-		project6Link: "https://github.com/romanaleksandrowith/fhir-patient-dashboard",
-		
-		
-		
-		
-        workTitle: "How I work",
-        work: [
-          "Understand your task",
-          "Analyze data",
-          "Build solution",
-          "Deliver result"
-        ],
-
-        toolsTitle: "Tools",
-        toolsText: "Excel • Power BI • Python • Google Apps Script • SQL • Access",
-
-        contactTitle: "Contact",
-        contactText: "GitHub | Upwork | Kwork | Email"
-      },
-
-      ru: {
-        pageTitle: "Roman — Специалист по автоматизации и отчетности",
-        heroTitle: "Roman — Специалист по автоматизации и аналитической отчетности",
-        heroText:
-          "Я помогаю бизнесу очищать, структурировать и автоматизировать работу с данными, а также создавать понятные дашборды с помощью Excel, Power BI, Python и Google Sheets.",
-
-        servicesTitle: "Чем я могу помочь",
-        services: [
-          "Очистка и структурирование данных",
-          "Автоматизация и отчеты в Excel",
-          "Дашборды в Power BI",
-          "Обработка данных с помощью Python",
-          "Автоматизация Google Sheets (Apps Script)",
-          "Работа с SQL и Access"
-        ],
-
-        portfolioTitle: "Портфолио",
-        project1Title: "Автоматизация отчетов в Excel",
-        project1Text:
-          "Автоматизировал процесс подготовки отчетов, чтобы сократить ручную работу и ускорить обработку данных.",
-
-        project2Title: "Дашборд в Power BI",
-        project2Text:
-          "Создал интерактивный дашборд с KPI и фильтрами для удобного анализа бизнес-показателей.",
-
-        project3Title: "Обработка данных на Python",
-        project3Text:
-          "Разработал скрипты для очистки и преобразования наборов данных.",
-
-        project4Title: "Автоматизация Google Sheets",
-        project4Text:
-          "Автоматизировал повторяющиеся задачи с помощью Google Apps Script.",
-		
-		project5Title: "Автоматизация мониторинга новостей (Google Apps Script)",
-		project5Text:
-			"Автоматизированное решение для сбора новостей по ключевым словам, записи результатов в Google Sheets и формирования структурированного отчёта. Включает парсинг Google News RSS, автоматическую обработку, интеграцию с Google Sheets и live demo.",
-		project5LinkText: "Открыть проект / демо",
-		project5Link: "https://docs.google.com/spreadsheets/d/12drtad20WxVXm-7gCHYJixvpeIyRUdazBJbTDKtzmKk/edit?usp=sharing",
-		
-		project6Title: "Дашборд воронки пациентов (FHIR API)",
-		project6Text:
-		  "Пилотный аналитический проект на основе открытого FHIR API. Реализованы ETL на Python, нормализация JSON, загрузка данных в SQLite, построение staging-таблиц, SQL-сопоставление Appointment и Encounter и расчет KPI для воронки пациентов: запись на визит → состоявшийся прием.",
-		project6LinkText: "Открыть проект на GitHub",
-		project6Link: "https://github.com/romanaleksandrowith/fhir-patient-dashboard",
-
-        workTitle: "Как я работаю",
-        work: [
-          "Изучаю вашу задачу",
-          "Анализирую данные",
-          "Создаю решение",
-          "Передаю готовый результат"
-        ],
-
-        toolsTitle: "Инструменты",
-        toolsText: "Excel • Power BI • Python • Google Apps Script • SQL • Access",
-
-        contactTitle: "Контакты",
-        contactText: "GitHub | Upwork | Kwork | Email"
-      }
-    };
-
-    function renderList(elementId, items) {
-      const el = document.getElementById(elementId);
-      el.innerHTML = "";
-      items.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        el.appendChild(li);
-      });
-    }
-
-    function setLanguage(lang) {
-      const t = content[lang];
-
-      document.documentElement.lang = lang;
-      document.title = t.pageTitle;
-
-		document.getElementById("hero-title").textContent = t.heroTitle;
-		document.getElementById("hero-text").textContent = t.heroText;
-
-		document.getElementById("services-title").textContent = t.servicesTitle;
-		renderList("services-list", t.services);
-
-		document.getElementById("portfolio-title").textContent = t.portfolioTitle;
-
-		document.getElementById("project1-title").textContent = t.project1Title;
-		document.getElementById("project1-text").textContent = t.project1Text;
-
-		document.getElementById("project2-title").textContent = t.project2Title;
-		document.getElementById("project2-text").textContent = t.project2Text;
-
-		document.getElementById("project3-title").textContent = t.project3Title;
-		document.getElementById("project3-text").textContent = t.project3Text;
-
-		document.getElementById("project4-title").textContent = t.project4Title;
-		document.getElementById("project4-text").textContent = t.project4Text;
-	
-		document.getElementById("project5-title").textContent = t.project5Title;
-		document.getElementById("project5-text").textContent = t.project5Text;
-		document.getElementById("project5-link").textContent = t.project5LinkText;
-		document.getElementById("project5-link").href = t.project5Link;
-		
-		document.getElementById("project6-title").textContent = t.project6Title;
-		document.getElementById("project6-text").textContent = t.project6Text;
-		document.getElementById("project6-link").textContent = t.project6LinkText;
-		document.getElementById("project6-link").href = t.project6Link;
-
-		document.getElementById("work-title").textContent = t.workTitle;
-		renderList("work-list", t.work);
-
-		document.getElementById("tools-title").textContent = t.toolsTitle;
-		document.getElementById("tools-text").textContent = t.toolsText;
-
-		document.getElementById("contact-title").textContent = t.contactTitle;
-		document.getElementById("contact-text").textContent = t.contactText;
-
-      localStorage.setItem("siteLanguage", lang);
-    }
-
-    const savedLanguage = localStorage.getItem("siteLanguage") || "en";
-    setLanguage(savedLanguage);
-  </script>
-
-  
-  
+  <script src="script.js"></script>
 </body>
 </html>
